@@ -89,6 +89,7 @@ def bootstrapPuppet():
     runCommand('touch /tmp/puppet_bootstrap.log')
     cmd = ('/opt/puppetlabs/bin/puppet agent'
            ' --logdest /tmp/puppet_bootstrap.log'
+	   ' --detailed-exitcodes'
            ' --no-daemonize'
            ' --onetime --server %s --waitforcert 120' % installerHostName)
 

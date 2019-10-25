@@ -63,7 +63,7 @@ def main():
 
     try_command(['/opt/puppetlabs/bin/puppet','agent', '--verbose', '--onetime',
                  '--no-daemonize', '--logdest', '/tmp/puppet_bootstrap.log',
-                 '--color', 'false', '--waitforcert', '120', '--server',
+                 '--color', 'false', '--waitforcert', '120', '--server', '--detailed-exitcodes',
                  installerHostName], good_return_values=(0, 2), time_limit=10*60)
 
 

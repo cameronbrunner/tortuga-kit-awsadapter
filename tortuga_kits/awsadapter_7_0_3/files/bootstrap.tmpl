@@ -168,6 +168,7 @@ def bootstrapPuppet():
     cmd = ('/opt/puppetlabs/bin/puppet agent'
            ' --logdest /tmp/puppet_bootstrap.log'
            ' --no-daemonize'
+	   ' --detailed-exitcodes'
            ' --onetime --server %s --waitforcert 120' % installerHostName)
 
     tryCommand(cmd, good_return_values=(0, 2), time_limit=10*60)
